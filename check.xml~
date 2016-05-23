@@ -55,24 +55,27 @@
 		</sequential>
 	</macrodef>
     <target name="git-tag">
+	<change dir="/home/piyushjoshi/test_for_tag/Python/"></cd>
+	<fileset dir="/home/piyushjoshi/test_for_tag/Python/"></fileset>
         <git command = "tag">
             <args>
 
 		<arg value="-a"/>
-		<arg value="v1.5"/>
+		<arg value="v1.6"/>
 		<arg value="-m"/>
-		<arg value="v1.5"/>
+		<arg value="v1.6"/>
 		
             </args>
         </git> 
     </target>
 
 <target name="push" depends="git-tag">
+	<basedir dir="/home/piyushjoshi/test_for_tag/Python"> </basedir>
         <git command = "push">
             <args>
 
 		<arg value="origin"/>
-		<arg value="v1.5"/>
+		<arg value="v1.6"/>
 		
 		
             </args>
